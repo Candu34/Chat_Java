@@ -11,15 +11,15 @@ public class GroupChat
 
 
 
-        String arguments[] = {"239.0.0.0","1234"};
-        if (arguments.length != 2)
+       
+        if (args.length != 2)
             System.out.println("Two arguments required: <multicast-host> <port-number>");
         else
         {
             try
             {
-                InetAddress group = InetAddress.getByName(arguments[0]);
-                int port = Integer.parseInt(arguments[1]);
+                InetAddress group = InetAddress.getByName(args[0]);
+                int port = Integer.parseInt(args[1]);
                 Scanner sc = new Scanner(System.in);
                 System.out.print("Enter your name: ");
                 name = sc.nextLine();
